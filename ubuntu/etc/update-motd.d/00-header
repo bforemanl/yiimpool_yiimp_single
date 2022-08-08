@@ -33,8 +33,8 @@ if [ -z "$DISTRIB_DESCRIPTION" ] && [ -x /usr/bin/lsb_release ]; then
         DISTRIB_DESCRIPTION=$(lsb_release -s -d)
 fi
 
-figlet -f slant -w 100 "Afiniel YiimpooL"
+figlet -f slant -w 100 "Afiniel YiimpooL" | lolcat
 printf "\n"
 
-printf "Welcome to %s (%s).\n" "$DISTRIB_DESCRIPTION" "YiimPool Version v3.0"
+printf "Welcome to %s (%s).\n" "$DISTRIB_DESCRIPTION" "YiimPool Version v2.0"
 printf "\n"
