@@ -60,42 +60,29 @@ source $STORAGE_ROOT/yiimp/.yiimp.conf
 clear
 
 if [[ ("$UsingDomain" == "yes") ]]; then
-  echo -e "Installation of your Yiimpool Yiimp v3.0 is now completed."
-  echo -e "You $RED*MUST REBOOT*$COL_RESET the machine to finalize the machine updates and folder permissions! $MAGENTA YiiMP will not function until a reboot is performed!$COL_RESET"
+  echo -e "$YELLOW Installation of your Yiimp is now$GREEN completed."
+  echo -e "$YELLOW You $RED*MUST REBOOT*$YELLOW the machine to finalize the machine updates and folder permissions! $MAGENTA YiiMP will not function until a$RED reboot$YELLOW is performed!$COL_RESET"
   echo
-  echo -e "$YELLOW Important!$COL_RESET After first reboot it may take up to 1 minute for the main|loop2|blocks|debug screens to start!"
-  echo -e "If they show$RED stopped$COL_RESET, after 1 minute, type$GREEN motd$COL_RESET to refresh the screen."
+  echo -e "$YELLOW Important! After first$RED reboot$YELLOW it may take up to 1 minute for the$GREEN main$YELLOW|$GREEN loop2$YELLOW|$GREEN blocks$YELLOW|$GREEN debug$YELLOW screens to start!$COL_RESET"
+  echo -e "$YELLOW If they show$RED stopped,$YELLOW after 1 minute, type$GREEN motd$YELLOW to$GREEN refresh$YELLOW the screen.$COL_RESET"
   echo
-  echo -e "You can access your admin panel at,$BLUE http://${DomainName}/site/${AdminPanel} $COL_RESET"
+  echo -e "$YELLOW You can access your$GREEN $AdminPanel $YELLOW at,$BLUE http://${DomainName}/site/${AdminPanel} $COL_RESET"
   echo
-  echo -e "$RED By default all stratum ports are blocked by the firewall.$COL_RESET To allow a port through, from the command prompt type $GREEN sudo ufw allow port number.$COL_RESET"
-  echo "Database user names and passwords can be found in $STORAGE_ROOT/yiimp_setup/.my.cnf"
+  echo -e "$RED By default all stratum ports are blocked by the firewall.$YELLOW To allow a port through, from the command prompt type $GREEN sudo ufw allow port number.$COL_RESET"
+  echo -e "$GREEN Database user names and passwords$YELLOW can be found in$RED $STORAGE_ROOT/yiimp_setup/.my.cnf$COL_RESET"
 else
-  echo -e "Installation of your Yiimpool Yiimp v3.0 is now completed."
-  echo -e "You $RED*MUST REBOOT*$COL_RESET the machine to finalize the machine updates and folder permissions! $MAGENTA YiiMP will not function until a reboot is performed!$COL_RESET"
+  echo -e "$YELLOW Installation of your Yiimp is now$GREEN completed."
+  echo -e "$YELLOW You $RED*MUST REBOOT*$YELLOW the machine to finalize the machine updates and folder permissions! $MAGENTA YiiMP will not function until a$RED reboot$YELLOW is performed!$COL_RESET"
   echo
-  echo -e "$YELLOW Important!$COL_RESET After first reboot it may take up to 1 minute for the main|loop2|blocks|debug screens to start!"
-  echo -e "If they show$RED stopped$COL_RESET, after 1 minute, type$GREEN motd$COL_RESET to refresh the screen."
+  echo -e "$YELLOW Important! After first$RED reboot$YELLOW it may take up to 1 minute for the$GREEN main$YELLOW|$GREEN loop2$YELLOW|$GREEN blocks$YELLOW|$GREEN debug$YELLOW screens to start!$COL_RESET"
+  echo -e "$YELLOW If they show$RED stopped,$YELLOW after 1 minute, type$GREEN motd$YELLOW to$GREEN refresh$YELLOW the screen.$COL_RESET"
   echo
-  echo -e "You can access your admin panel at,$BLUE http://${DomainName}/site/${AdminPanel} $COL_RESET"
-  echo -e "You will be alerted that the website has an invalid certificate."
+  echo -e "$YELLOW You can access your$GREEN $AdminPanel $YELLOW at,$BLUE http://${DomainName}/site/${AdminPanel} $COL_RESET"
   echo
-  echo -e "$RED By default all stratum ports are blocked by the firewall.$COL_RESET To allow a port through, from the command prompt type $GREEN sudo ufw allow port number.$COL_RESET"
-  echo "Database user names and passwords can be found in $STORAGE_ROOT/yiimp_setup/.my.cnf"
+  echo -e "$RED By default all stratum ports are blocked by the firewall.$YELLOW To allow a port through, from the command prompt type $GREEN sudo ufw allow port number.$COL_RESET"
+  echo -e "$GREEN Database user names and passwords$YELLOW can be found in$RED $STORAGE_ROOT/yiimp_setup/.my.cnf$COL_RESET"
 fi
 
 echo
-echo -e "$YELLOW Happy mining $COL_RESET"
-echo "----------------------------------------------------------------------------"
-echo
-echo -e "$GREEN Thank you for using Afiniel Yiimpool Installer v3.0!$COL_RESET"
-echo
-echo -e "$YELLOW To run this installer anytime simply type, $GREEN yiimpool $COL_RESET"
-echo -e "$YELLOW If you want to support by donate, use wallet below $COL_RESET"
-echo
-echo -e "$YELLOW BTC:$COL_RESET $GREEN bc1qpnxtg3dvtglrvfllfk3gslt6h5zffkf069nh8r  $COL_RESET"
-echo -e "$YELLOW BCH:$COL_RESET $GREEN qpy2ehcxtddkfrrxqyq5skrvace66wvuqyuyzc87sc  $COL_RESET"
-echo -e "$YELLOW ETH:$COL_RESET $GREEN 0x50C7d0BF9714dBEcDc1aa6Ab0E72af8e6Ce3b0aB  $COL_RESET"
-echo -e "$YELLOW DOGE:$COL_RESET $GREEN DCj73fKJbHeDTJx7arz4z7bbknWkSDpD8h         $COL_RESET"
-echo "----------------------------------------------------------------------------"
-exit 0
+last_words
+
