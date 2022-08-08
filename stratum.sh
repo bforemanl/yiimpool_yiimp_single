@@ -19,15 +19,15 @@ sudo make -j8
 # Compile iniparser , blocknotify and stratum.
 cd /home/crypto-data/yiimp/yiimp_setup/yiimp/stratum
     git submodule init && git submodule update
-    make -C algos
-    make -C sha3
-    make -C iniparser
+    sudo make -C algos
+    sudo make -C sha3
+    sudo make -C iniparser
     cd secp256k1 && chmod +x autogen.sh && ./autogen.sh && ./configure --enable-experimental --enable-module-ecdh --with-bignum=no --enable-endomorphism && make
     cd /home/crypto-data/yiimp/yiimp_setup/yiimp/stratum
     if [[ ("$BTC" == "y" || "$BTC" == "Y") ]]; then
     sudo sed -i 's/CFLAGS += -DNO_EXCHANGE/#CFLAGS += -DNO_EXCHANGE/' $HOME/yiimp/stratum/Makefile
     fi
-    make -j8
+    sudo make -j8
 
 # Copy the compiled stratum files to the correct location.
 echo -e "$YELLOW Building stratum folder structure and copying files...$COL_RESET"
