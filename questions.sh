@@ -13,15 +13,15 @@ source $STORAGE_ROOT/yiimp/.wireguard.conf
 fi
 
 if [[ ("$wireguard" == "true") ]]; then
-message_box "Yiimpool Yiimp installer v2.0" \
-"You have choosen to install Yiimpool Yiimp v2.0 with WireGuard!
+message_box "Yiimpool Yiimp installer v3.0" \
+"You have choosen to install Yiimpool Yiimp v3.0 with WireGuard!
 \n\nThis option will install all componets of YiiMP on a single server along with WireGuard so you can easily add additional servers in the future.
 \n\nPlease make sure any domain name or sub domain names are pointed to this servers IP prior to running this installer.
 \n\nAfter answering the following questions, setup will be automated.
 \n\nNOTE: If installing on a system with less then 8 GB of RAM you may experience system issues!"
 else
-message_box "Yiimpool Yiimp installer v2.0" \
-"You have choosen to install Yiimpool Yiimp v2.0!
+message_box "Yiimpool Yiimp installer v3.0" \
+"You have choosen to install Yiimpool Yiimp v3.0!
 \n\nThis option will install all componets of YiiMP on a single server.
 \n\nPlease make sure any domain name or sub domain names are pointed to this servers IP prior to running this installer.
 \n\nAfter answering the following questions, setup will be automated.
@@ -273,7 +273,7 @@ StratumDBUser='"${StratumDBUser}"'
 StratumUserDBPassword='"'"''"${StratumUserDBPassword}"''"'"'
 
 # Unless you do some serious modifications this installer will not work with any other repo of yiimp!
-YiiMPRepo='https://github.com/Afiniel-tech/yiimp.git'
+YiiMPRepo='https://github.com/afiniel/yiimp.git'
 ' | sudo -E tee $STORAGE_ROOT/yiimp/.yiimp.conf >/dev/null 2>&1
 else
 echo 'STORAGE_USER='"${STORAGE_USER}"'
@@ -301,7 +301,7 @@ StratumUserDBPassword='"'"''"${StratumUserDBPassword}"''"'"'
 YiiMPStratumName='"${YiiMPStratumName}"'
 
 # Unless you do some serious modifications this installer will not work with any other repo of yiimp!
-YiiMPRepo='https://github.com/Afiniel-tech/yiimp.git'
+YiiMPRepo='https://github.com/afiniel/yiimp.git'
 ' | sudo -E tee $STORAGE_ROOT/yiimp/.yiimp.conf >/dev/null 2>&1
 fi;;
 1)
