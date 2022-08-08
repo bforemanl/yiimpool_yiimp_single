@@ -14,14 +14,14 @@ fi
 
 if [[ ("$wireguard" == "true") ]]; then
 message_box "Yiimpool Yiimp installer v3.0" \
-"You have choosen to install Yiimpool Yiimp v3.0 with WireGuard!
+"You have choosen to install Yiimpool Yiimp with WireGuard!
 \n\nThis option will install all componets of YiiMP on a single server along with WireGuard so you can easily add additional servers in the future.
-\n\nPlease make sure any domain name or sub domain names are pointed to this servers IP prior to running this installer.
+\n\nPlease make sure any domain name or sub domain names are pointed (updated) to this servers IP prior to running this installer.
 \n\nAfter answering the following questions, setup will be automated.
 \n\nNOTE: If installing on a system with less then 8 GB of RAM you may experience system issues!"
 else
 message_box "Yiimpool Yiimp installer v3.0" \
-"You have choosen to install Yiimpool Yiimp v3.0!
+"You have choosen to install Yiimpool Yiimp!
 \n\nThis option will install all componets of YiiMP on a single server.
 \n\nPlease make sure any domain name or sub domain names are pointed to this servers IP prior to running this installer.
 \n\nAfter answering the following questions, setup will be automated.
@@ -29,8 +29,8 @@ message_box "Yiimpool Yiimp installer v3.0" \
 fi
 
 # Begin user inputted responses for auto install
-dialog --title "Using Domain Name" \
---yesno "Are you using a domain name? Example: example.com?
+dialog --title "Domain Name" \
+--yesno "Are you using a domain name? Example: mypool.com?
 Make sure the DNS is updated!" 7 60
 response=$?
 case $response in
@@ -41,8 +41,8 @@ esac
 
 if [[ ("$UsingDomain" == "yes") ]]; then
 
-dialog --title "Using Sub-Domain" \
---yesno "Are you using a sub-domain for the main website domain? Example pool.example.com?
+dialog --title "Sub-Domain" \
+--yesno "Are you using a sub-domain for the main website domain? Example coin.mypool.com?
 Make sure the DNS is updated!" 7 60
 response=$?
 case $response in
@@ -54,7 +54,7 @@ esac
 if [ -z "${DomainName:-}" ]; then
 DEFAULT_DomainName=example.com
 input_box "Domain Name" \
-"Enter your domain name. If using a subdomain enter the full domain as in pool.example.com
+"Enter your domain name. If using a subdomain enter the full domain as in coin.mypool.com
 \n\nDo not add www. to the domain name.
 \n\nMake sure the domain is pointed to this server before continuing!
 \n\nDomain Name:" \
