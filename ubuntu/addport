@@ -48,7 +48,7 @@ read -e -p "Would you like to set a minimum nicehash value for this stratum? (y/
 if [[ ("$nicehash" == "y" || "$nicehash" == "Y" || "$nicehash" == "yes" || "$nicehash" == "YES") ]]; then
 read -e -p "Please enter a whole value, example: 750000 : " nicevalue
 fi
-# Make the coin symbol lower case
+# Make sure the coin symbol lower case
 coinsymbollower=${coinsymbol,,}
 # make sure algo is lower as well since we are Here
 coinalgo=${coinalgo,,}
