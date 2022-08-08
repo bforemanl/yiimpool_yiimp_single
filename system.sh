@@ -154,8 +154,7 @@ pwgen libgmp3-dev libmysqlclient-dev libcurl4-gnutls-dev \
 libkrb5-dev libldap2-dev libidn11-dev gnutls-dev librtmp-dev \
 build-essential libtool autotools-dev automake pkg-config libevent-dev bsdmainutils libssl-dev \
 automake cmake gnupg2 ca-certificates lsb-release nginx certbot libsodium-dev \
-libnghttp2-dev librtmp-dev libssh2-1 libssh2-1-dev libldap2-dev libidn11-dev libpsl-dev libkrb5-dev php7.3-memcache php7.3-memcached memcached \
-php8.1-mysql
+libnghttp2-dev librtmp-dev libssh2-1 libssh2-1-dev libldap2-dev libidn11-dev libpsl-dev libkrb5-dev php7.3-memcache php7.3-memcached memcached
 else
 apt_install php7.3-fpm php7.3-opcache php7.3-fpm php7.3 php7.3-common php7.3-gd \
 php7.3-mysql php7.3-imap php7.3-cli php7.3-cgi \
@@ -169,9 +168,13 @@ pwgen libgmp3-dev libmysqlclient-dev libcurl4-gnutls-dev \
 libkrb5-dev libldap2-dev libidn11-dev gnutls-dev librtmp-dev \
 build-essential libtool autotools-dev automake pkg-config libevent-dev bsdmainutils libssl-dev \
 libpsl-dev libnghttp2-dev automake cmake gnupg2 ca-certificates lsb-release nginx certbot libsodium-dev \
-libnghttp2-dev librtmp-dev libssh2-1 libssh2-1-dev libldap2-dev libidn11-dev libpsl-dev libkrb5-dev php7.3-memcache php7.3-memcached memcached \
-php8.1-mysql
+libnghttp2-dev librtmp-dev libssh2-1 libssh2-1-dev libldap2-dev libidn11-dev libpsl-dev libkrb5-dev php7.3-memcache php7.3-memcached memcached
 fi
+
+# Fix DBconnection error
+echo -e "$YELLOW Fixing DBconnection error...$COL_RESET"
+apt_install php8.1-mysql
+echo -e "Done... $COL_RESET"
 
 # ### Suppress Upgrade Prompts
 # When Ubuntu 20 comes out, we don't want users to be prompted to upgrade,
@@ -188,7 +191,7 @@ hide_output sudo git clone ${YiiMPRepo} $STORAGE_ROOT/yiimp/yiimp_setup/yiimp
 if [[ ("$CoinPort" == "yes") ]]; then
 	cd $STORAGE_ROOT/yiimp/yiimp_setup/yiimp
 	sudo git fetch
-	sudo git checkout multi-port >/dev/null 2>&1
+	sudo git checkout next >/dev/null 2>&1
 fi
 echo -e "$GREEN System files installed...$COL_RESET"
 hide_output service nginx restart
