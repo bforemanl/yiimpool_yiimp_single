@@ -27,6 +27,7 @@ cd $STORAGE_ROOT/yiimp/yiimp_setup/yiimp/stratum
     if [[ ("$AutoExchange" == "yes") ]]; then
     sudo sed -i 's/CFLAGS += -DNO_EXCHANGE/#CFLAGS += -DNO_EXCHANGE/' $STORAGE_ROOT/yiimp/yiimp_setup/yiimp/stratum/Makefile
 fi
+cd $STORAGE_ROOT/yiimp/yiimp_setup/yiimp/stratum
 sudo make -j8
 
 # Copy the compiled stratum files to the correct location.
