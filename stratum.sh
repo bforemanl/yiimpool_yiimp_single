@@ -26,7 +26,7 @@ cd $STORAGE_ROOT/yiimp/yiimp_setup/yiimp/stratum
     cd $STORAGE_ROOT/yiimp/yiimp_setup/yiimp/stratum
     if [[ ("$AutoExchange" == "yes") ]]; then
     sudo sed -i 's/CFLAGS += -DNO_EXCHANGE/#CFLAGS += -DNO_EXCHANGE/' $STORAGE_ROOT/yiimp/yiimp_setup/yiimp/stratum/Makefile
-fi
+if
 cd $STORAGE_ROOT/yiimp/yiimp_setup/yiimp/stratum
 sudo make -j8
 
@@ -79,7 +79,7 @@ if [[ ("$wireguard" == "true") ]]; then
   sudo sed -i 's/host = yaampdb/host = '${DBInternalIP}'/g' *.conf
 else
 sudo sed -i 's/host = yaampdb/host = localhost/g' *.conf
-fi
+if
 sudo sed -i 's/database = yaamp/database = '${YiiMPDBName}'/g' *.conf
 sudo sed -i 's/username = root/username = '${StratumDBUser}'/g' *.conf
 sudo sed -i 's/password = patofpaq/password = '${StratumUserDBPassword}'/g' *.conf
